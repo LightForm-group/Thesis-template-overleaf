@@ -1,0 +1,223 @@
+%%%%%%%%%%%%%%%%% Format %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{Sections/format}
+
+%%%%%%%%%%%%%%% Start of the report %%%%%%%%%%%%%%%%%%
+
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epstopdf}
+\usepackage[table]{xcolor}
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+\usepackage{float}
+\usepackage{matlab}
+\usepackage{vmargin}
+\usepackage{pdflscape}
+\usepackage{chngcntr}
+\usepackage{fancyhdr} % For customizing headers and footers
+\usepackage{ragged2e}
+\usepackage{titling}  % For custom title formatting
+\usepackage{gensymb}
+\usepackage{float}
+
+\DeclareUnicodeCharacter{00B0}{\degree}
+\counterwithin{figure}{section}
+%\usepackage{natbib}
+%\usepackage[numbers,sort&compress]{natbib}
+
+
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib} % Link to your .bib file
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+
+
+\makeindex
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\leftmark}
+\fancyfoot[C]{\thepage} % Page number at the center of the footer
+
+% Update the section name in the header
+\renewcommand{\sectionmark}[1]{\markboth{\thesection\ #1}{}}
+
+\usepackage{titlesec}
+
+%\titleformat{\chapter}
+
+% Remove section numbering
+\titleformat{\section}
+  {\Large\bfseries} % format
+  {}                % label
+  {0pt}             % sep
+  {\huge}           % before-code
+
+% Keep subsection numbering
+\titleformat{\subsection}
+  {\large\bfseries} % format
+  {\thesubsection}  % label
+  {1em}             % sep
+  {}                % before-code
+
+
+  
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%% START DOCUMENT %%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+\thispagestyle{empty} 
+
+\centering
+\vspace{4.4 in}
+
+\fontsize{24}{24}\selectfont 
+
+Add your title
+
+\fontsize{14}{14}\selectfont 
+\vspace{1.4 in}
+A thesis submitted to the University of Manchester for the degree of Doctor of Philosophy in the Faculty of Science and Engineering.
+
+
+\vspace{1.4 in}
+\textbf{Add the year of submission}
+
+
+\vspace{1 in}
+\noindent
+\textbf{Add your name}
+
+
+\vspace{1.2 in}
+\textbf{School of Natural Sciences, Department of Materials}
+
+\clearpage
+
+
+\begin{justify}
+
+\tableofcontents
+
+\clearpage
+
+\listoffigures
+
+\clearpage
+
+\listoftables
+
+
+\clearpage
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Abstract}}
+\thispagestyle{plain}
+\vspace{0.1 in}
+\noindent
+
+Add your abstract
+
+\clearpage
+\thispagestyle{plain}
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Declaration}}
+
+\vspace{0.1 in}
+\noindent
+
+No portion of the work referred to in the thesis has been submitted in support of an application for another degree or qualification of this or any other university or other institute of learning.
+
+\clearpage
+\thispagestyle{plain}
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Copyright statement}}
+
+\vspace{0.1 in}
+\noindent
+
+\begin{itemize}
+    \item The author of this thesis (including any appendices and/or schedules to this thesis) owns certain copyright or related rights in it (the “Copyright”) and they have given the University of Manchester certain rights to use such Copyright, including for administrative purposes.
+    \item Copies of this thesis, either in full or in extracts and whether in hard or electronic copy, may be made only in accordance with the Copyright, Designs and Patents Act 1988 (as amended) and regulations issued under it or, where appropriate, in accordance with licensing agreements which the University has from time to time. This page must form part of any such copies made.
+    \item The ownership of certain Copyright, patents, designs, trademarks and other intellectual property (the “Intellectual Property”) and any reproductions of copyright works in the thesis, for example graphs and tables (“Reproductions”), which may be described in this thesis, may not be owned by the author and may be owned by third parties. Such Intellectual Property and Reproductions cannot and must not be made available for use without the prior written permission of the owner(s) of the relevant Intellectual
+    \item Further information on the conditions under which disclosure, publication and commercialisation of this thesis, the Copyright and any Intellectual Property and/or Reproductions described in it may take place is available in the \href{http://documents.manchester.ac.uk/DocuInfo.aspx?DocID=24420}{University IP Policy}, in any relevant Thesis restriction declarations deposited in the University Library, the  \href{http://www.library.manchester.ac.uk/about/regulations/}{University Library's regulations} and in the \href{https://documents.manchester.ac.uk/display.aspx?DocID=7420}{University's policy on Presentation of Theses}.
+\end{itemize}
+
+
+
+
+
+\clearpage
+\thispagestyle{plain}
+
+\vspace*{-2cm}  
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Acknowledgements}}
+
+
+\vspace{0.1 in}
+\noindent
+
+Add here your acknowledgements
+
+
+\clearpage
+\thispagestyle{plain}
+(blank page)
+
+
+
+
+
+\clearpage
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Chapter 1}}
+\input{Sections/Chapter1-Introduction}
+
+\clearpage
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Chapter 2}}
+\input{Sections/Chapter2-LitRev}
+
+\clearpage
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Chapter 3}}
+\input{Sections/Chapter3-Methodology}
+
+\clearpage
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Chapter 4}}
+\input{Sections/Chapter4-name}
+
+\clearpage
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Chapter 5}}
+\input{Sections/Chapter5-name}
+
+\clearpage
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Chapter 6}}
+\input{Sections/Chapter6-name}
+
+
+\clearpage
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Chapter 9}}
+\input{Sections/Chapter9-Conclusions}
+
+\clearpage
+\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Chapter 10}}
+\input{Sections/Chapter10-future}
+
+
+\clearpage
+%\chapter{\fontsize{24pt}{20pt}\selectfont \textbf{Chapter 11}}
+\input{Sections/Chapter11-references}
+
+
+
+\end{justify}
+\end{document}
+\endinput
+
+%%%%%%%%%%%%%%%%%% End of the report %%%%%%%%%%%%%%
